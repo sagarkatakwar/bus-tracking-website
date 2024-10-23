@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="Untitled design.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
     <div class="container">
         <h1>College Bus Tracker</h1>
         <input type="text" id="busNumber" placeholder="Enter Bus Number">
         <button onclick="trackBus()">Track Bus</button>
         <div id="status"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
