@@ -11,10 +11,10 @@ body {
 
 #backgroundVideo {
     position: fixed; /* Fix the video to the viewport */
-    top: 20%; /* Align to a bit lower than the top (adjust as needed) */
+    top: 0; /* Align to the top of the viewport */
     left: 0; /* Align to the left of the viewport */
     width: 100vw; /* Set width to 100% of viewport width */
-    height: 80vh; /* Set height to 80% of viewport height */
+    height: 100vh; /* Set height to 100% of viewport height */
     object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
     z-index: -1; /* Place the video behind other elements */
 }
@@ -27,11 +27,9 @@ body {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     max-width: 400px;
-    margin: auto; /* Center the container horizontally */
-    position: absolute; /* Position absolute to allow centering */
-    top: 50%; /* Center vertically based on parent element */
-    left: 50%; /* Center horizontally based on parent element */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    margin: auto; /* Center the container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust position */
 }
 
 input[type="text"] {
