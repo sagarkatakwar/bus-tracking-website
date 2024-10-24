@@ -2,13 +2,14 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;  /* Disable scrolling */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 /* Background video */
@@ -16,10 +17,10 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -1; /* Behind all other elements */
 }
 
 /* Headline at the top */
@@ -38,7 +39,7 @@ header h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Input box container */
+/* Input box centered vertically */
 main {
   height: 100%;
   display: flex;
@@ -98,11 +99,11 @@ main {
   header h1 {
     font-size: 2.2rem;
   }
-  
+
   .input-box h2 {
     font-size: 1.5rem;
   }
-  
+
   .input-box {
     padding: 20px;
   }
