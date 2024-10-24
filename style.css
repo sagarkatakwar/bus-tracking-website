@@ -23,13 +23,22 @@ body {
     position: relative; /* Allow absolute positioning of child elements */
     text-align: center;
     color: white;
-    padding: 50px;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     max-width: 400px;
     margin: auto; /* Center the container */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust position */
+}
+
+h1 {
+    margin-bottom: 20px; /* Space between heading and input */
+    text-align: center; /* Center the heading */
+    position: absolute; /* Position the heading at the top */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Align to center */
+    transform: translateX(-50%); /* Adjust for width */
 }
 
 input[type="text"] {
@@ -56,4 +65,3 @@ button:hover {
 #status {
     margin-top: 20px;
 }
-
