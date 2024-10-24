@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Bus Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVPCET College Bus Tracking System</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <video autoplay muted loop id="backgroundVideo">
-        <source src="Untitled design.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div class="container">
-        <h1>College Bus Tracker</h1>
-        <input type="text" id="busNumber" placeholder="Enter Bus Number">
-        <button onclick="trackBus()">Track Bus</button>
-        <div id="status"></div>
-    </div>
+  <!-- Video Background -->
+  <video autoplay muted loop id="background-video">
+    <source src="background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <script src="script.js"></script>
+  <!-- Headline -->
+  <header>
+    <h1>SVPCET COLLEGE BUS TRACKING SYSTEM</h1>
+  </header>
+
+  <!-- Input Box -->
+  <main>
+    <div class="input-container">
+      <div class="input-box">
+        <h2>Enter Your Bus Number</h2>
+        <input type="text" id="bus-number" placeholder="Bus Number" required>
+        <button onclick="redirect()">Track Bus</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
