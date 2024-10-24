@@ -1,33 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scrollbars from showing */
+/* Background video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-#backgroundVideo {
-    position: fixed; /* Fix the video to the viewport */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    width: 100vw; /* Set width to 100% of viewport width */
-    height: 100vh; /* Set height to 100% of viewport height */
-    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
-    z-index: -1; /* Place the video behind other elements */
+/* Headline at the top */
+header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
 }
 
-.container {
-    position: absolute; /* Change to absolute positioning */
-    text-align: center;
-    color: white;
+header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Input box container */
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Translucent input box */
+.input-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-box button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-box button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .input-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .input-box {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-width: 400px;
-    width: 80%; /* Allow some responsiveness */
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Center vertically */
-    transform: translate(-50%,
+  }
+}
