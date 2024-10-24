@@ -5,11 +5,7 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;  /* Disable scrolling */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden; /* Disable scrolling */
 }
 
 /* Background video */
@@ -20,14 +16,16 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Behind all other elements */
+  z-index: -1;
 }
 
-/* Headline at the top */
+/* Headline at the top center */
 header {
   position: absolute;
-  top: 20px;
+  top: 0;
   width: 100%;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Slight background behind headline */
   text-align: center;
   z-index: 2;
 }
@@ -36,38 +34,31 @@ header h1 {
   font-size: 2.8rem;
   font-weight: bold;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Input box centered vertically */
-main {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Input box container in the middle */
+.input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
   z-index: 2;
 }
 
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Translucent input box */
 .input-box {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 15px;
-  text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .input-box h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .input-box input {
@@ -94,17 +85,18 @@ main {
   background-color: #2980b9;
 }
 
-/* Responsive design */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2rem;
-  }
-
-  .input-box h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .input-box {
     padding: 20px;
   }
+
+  .input-box h2 {
+    font-size: 1.5rem;
+  }
 }
+
